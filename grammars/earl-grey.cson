@@ -94,11 +94,14 @@
     'name': 'string.dotted.earl-grey'
   }
   {
-    'begin': '([a-zA-Z0-9_-]*)(?=\\s)'
+    'begin': '\\b(\\w[a-zA-Z0-9_-]*\\w)(?=\\s)'
     'beginCaptures':
       '1':
         'name': 'keyword.control.form.key.earl-grey'
-    'end': '([a-zA-Z0-9_-]|\\"|\')(?=\\:)'
+    'end': '(?:(\\b\\w[a-zA-Z0-9_-]*\\w\\b)\\:|\\:)'
+    'endCaptures':
+      '1':
+        'name': 'entity.name.control.symbol.earl-grey'
     'name': 'meta.control.form.earl-grey'
   }
 ]
